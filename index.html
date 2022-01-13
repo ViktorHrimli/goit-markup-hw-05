@@ -29,7 +29,7 @@
     </nav>
         <ul class="adress-conteiner list">
             <li class="nav-adress-ithem "> 
-            <a class="link color-link" href="mailto:info@devstudio.com"><svg class="icon-mail" width="14" height="16">
+            <a class="link color-link" href="mailto:info@devstudio.com"><svg class="icon-mail" width="16" height="12">
                     <use href="./imeges/iconsvg.svg#icon-envelope">
                     </use>
                 </svg>info@devstudio.com
@@ -37,7 +37,7 @@
             </li>
                 <li class="nav-adress-ithem ">
                 <a class="link color-link icon-link-phone"
-                    href="tel:+380961111111"> <svg class="icon-phone" width="14" height="16">
+                    href="tel:+380961111111"> <svg class="icon-phone" width="10" height="16">
                         <use href="./imeges/iconsvg.svg#icon-smartphone"></use>
                     </svg> +38 096 111 11 11
         
@@ -47,13 +47,41 @@
         </div>  
     </header>
     <!--Шапка  -->
+        </div>
+        <div data-backdrop class="backdrop is-hidden ">
+            <div class="modal">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laboriosam
+                veniam sit accusantium porro dolorum, similique cumque unde atque eaque
+                eos aliquid necessitatibus dolor temporibus pariatur voluptas recusandae
+                eligendi voluptatem qui facilis maiores alias beatae. Rem aliquid
+                consequuntur possimus libero fugit itaque odit ad, officia quisquam.
+                Perferendis corporis mollitia earum, sequi sint officiis nobis, numquam
+                corrupti ipsum expedita, tempore quis maiores dicta quia beatae?
+                Necessitatibus culpa, deserunt ea dignissimos sequi exercitationem facere
+                non dolores distinctio, reprehenderit iure eveniet veritatis accusamus
+                corrupti quod reiciendis magnam neque earum, fugit obcaecati praesentium
+                aperiam doloribus veniam modi! Reiciendis vel voluptate qui autem pariatur
+                eligendi, temporibus, consequatur excepturi illum natus iusto culpa
+                beatae, nostrum corporis provident nemo soluta quas minima! Fugit sapiente
+                obcaecati impedit asperiores reiciendis deleniti repudiandae quidem vitae,
+                repellat provident. Nam ratione nihil rerum quos eaque itaque autem
+                eveniet deserunt, dicta similique consequuntur a consectetur tempora
+                dolorem eius repudiandae iusto temporibus totam omnis!
+
+                <button class="bnt-close" data-close-modal type="button">
+            </button>
+          
+            </div>
+  
+        </div>
     <main class="hero">
         <section class="section-hero section">
             <div class="backgraund-hero conteiner ">
             <h1 class="hero-all">Эффективные решения <br> для вашего бизнеса</h1>
-            <button type="button" class="button">Заказать услугу </button>
-            </div>
+            <button data-open-modal type="button" class="button">Заказать услугу </button>
+     
         </section>
+
 
         <!-- Особенности -->
      <section class="about section">
@@ -108,17 +136,29 @@
          <ul class="list works-ithem">
              <li class="photo-works">
                 <img src="./imeges/portfol.jpg" alt="Фото работы" width="370">
+                <div class="work-fon">
+                    <h3 class="work-text head-list join">Десктопные приложения</h3>
+                </div>
              </li> 
        
             <li class="photo-works">
                   <img src="./imeges/photo.jpg" alt="Фото работы" width="370">
+                <div class="work-fon">
+                    <h3 class="work-text head-list join">Мобильные приложения</h3>
+                </div>
             </li>
        
             <li class="photo-works">
                     <img src="./imeges/photow.jpg" alt="Фото работы" width="370">
+                    <div class="work-fon">
+                        <h3 class="work-text head-list join">Дизайнерские решения</h3>
+                    </div>
             </li>
         </ul>
         </div>
+        
+        
+
      </section>
         <!-- Наша команда -->
      <section class="section teams">
@@ -185,7 +225,7 @@
                 <div class="name-conteiner">
                 <h3 class="head-list name">Николай Тарасов</h3>
                 <p class="text-list-team" lang="en">Marketing</p>
-                <a class="team-icon" href="">
+                <a class="team-icon " href="">
                     <svg class="social-team-icon" widht="20" height="20">
                         <use href="imeges/iconsvg.svg#icon-instagram">
                     </svg>
@@ -321,29 +361,37 @@
         </div>
     <div class="footer-center">
         <p class="head-list join">присоединяйтесь</p>
-        <ul class="list">
-            </ul> <a class="team-icon join-link" href="">
-                    <svg class="social-team-icon" widht="20" height="20">
-                        <use href="imeges/iconsvg.svg#icon-instagram">
-                    </svg>
-                </a>
-                <a class="team-icon join-link" href="">
-                    <svg class="social-team-icon">
-                        <use href="imeges/iconsvg.svg#icon-twitter">
-                    </svg>
-                </a>
-                <a class="team-icon join-link" href="">
-                    <svg class="social-team-icon">
-                        <use href="imeges/iconsvg.svg#icon-facebook">
-                    </svg>
-                </a>
-                <a class="team-icon join-link" href="">
-                    <svg class="social-team-icon">
-                        <use href="imeges/iconsvg.svg#icon-linkedin">
-                    </svg>
-                </a>
-                </div>
-            </li>
+        <ul class="list lsit-fotter-centr">
+            <li class="list items-fotter-centr">
+                <a class="team-icon link join-link" href="">
+                <svg class="social-team-icon" widht="20" height="20">
+                    <use href="imeges/iconsvg.svg#icon-instagram">
+                </svg>
+            </a>
+        </li>
+            
+            <li class="list items-fotter-centr">
+                <a class="team-icon link join-link" href="">
+                <svg class="social-team-icon">
+                    <use href="imeges/iconsvg.svg#icon-twitter">
+                </svg>
+            </a>
+        </li>   
+            <li class="list items-fotter-centr">
+                <a class="team-icon link join-link" href="">
+                <svg class="social-team-icon">
+                    <use href="imeges/iconsvg.svg#icon-facebook">
+                </svg>
+            </a>
+        </li> 
+            <li class="list items-fotter-centr">
+                <a class="team-icon link join-link" href="">
+                <svg class="social-team-icon">
+                    <use href="imeges/iconsvg.svg#icon-linkedin">
+                </svg>
+            </a>
+        </li>  
+            </div>
 
     </div>
 
@@ -353,7 +401,26 @@
 
 
 
+<script>
+    const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+    };
 
+    refs.openModalBtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", toggleModal);
+
+    refs.backdrop.addEventListener("click", logBackdropClick);
+
+    function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+    }
+
+    function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+    }
+</script>
     
 </body>
 </html>

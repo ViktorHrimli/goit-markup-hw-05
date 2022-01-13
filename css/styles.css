@@ -42,7 +42,6 @@ img {
 
 .conteiner {
   width: 1200px;
-  /* border: 2px solid tomato; */
   padding-left: 15px;
   padding-right: 15px;
   margin: auto;
@@ -71,6 +70,7 @@ address {
 .link:hover,
 .link:focus {
   color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text {
@@ -131,7 +131,23 @@ header {
 }
 
 .current {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   color: var(--title-text-color);
+}
+
+.current::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: -33px;
+
+  width: 100%;
+  height: 4px;
+  color: var(--button-color);
+  background: #2196f3;
+  border-radius: 2px;
 }
 
 .nav-list {
@@ -245,6 +261,7 @@ header {
   padding: 6px 22px;
   border: none;
 }
+
 .button-ithem {
   font-family: Roboto;
   font-weight: 500;
@@ -254,6 +271,64 @@ header {
   cursor: pointer;
   padding: 6px 22px;
   border: none;
+
+  transition: color 250ms, background-color 250ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ++++ МОДАЛКА ++++++ */
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.icon-close {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: #ffffff;
+}
+
+.bnt-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  height: 18px;
+  width: 18px;
+
+  background-image: url(../imeges/closeX.svg);
+  background-position: center;
+  background-size: cover;
 }
 
 /* Особенности */
@@ -354,15 +429,30 @@ header {
 }
 
 .photo-works {
+  position: relative;
   margin-left: 30px;
 }
 
-/* .photo-works:hover {
-  border: solid var(--button-color);
-} */
-
 .photo-works:first-child {
   margin-left: 0;
+}
+
+.work-text {
+  position: absolute;
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  bottom: 27px;
+  right: 82px;
+}
+
+.work-fon {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* Наша команда */
@@ -429,6 +519,8 @@ header {
   justify-content: center;
   align-items: center;
   color: #afb1b8;
+
+  transition: background-color 250ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
@@ -483,6 +575,8 @@ header {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
+
+  transition: color 250ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icons {
@@ -563,6 +657,14 @@ header {
   margin-left: 100px;
 }
 
+.lsit-fotter-centr {
+  display: inline-flex;
+}
+
+.items-fotter-centr + .items-fotter-centr {
+  margin-left: 10px;
+}
+
 /* Портфолио  */
 
 /* ФИЛЬТР КНОПОК */
@@ -617,7 +719,9 @@ header {
   margin-left: 30px;
   margin-bottom: 30px;
   text-align: left;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .list-progects:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -642,4 +746,22 @@ header {
 .type-progects {
   display: flex;
   flex-wrap: wrap;
+}
+
+/* ++++++ OVERLAY ++++++ */
+
+/* .conteiner-overley {
+  position: relative;
+  width: 100%;
+  height: 100%;
+} */
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0;
+
+  background-color: var(--button-color);
+  opacity: 0.5;
 }
