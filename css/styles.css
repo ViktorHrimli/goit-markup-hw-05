@@ -308,16 +308,6 @@ header {
   border-radius: 4px;
 }
 
-.icon-close {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-
-  transform: translate(-50%, -50%);
-
-  background: #ffffff;
-}
-
 .bnt-close {
   position: absolute;
   top: 8px;
@@ -329,6 +319,11 @@ header {
   background-image: url(../imeges/closeX.svg);
   background-position: center;
   background-size: cover;
+  background-color: #fff;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Особенности */
@@ -750,18 +745,38 @@ header {
 
 /* ++++++ OVERLAY ++++++ */
 
-/* .conteiner-overley {
+.conteiner-overlay {
   position: relative;
-  width: 100%;
-  height: 100%;
-} */
+  overflow: hidden;
+}
 
 .overlay {
+  position: absolute;
   width: 100%;
   height: 100%;
-  top: 0%;
-  left: 0;
 
-  background-color: var(--button-color);
-  opacity: 0.5;
+  text-align: start;
+  opacity: 1;
+
+  bottom: 0;
+  right: 0;
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-progects:hover .overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.overlay-text {
+  max-width: 322px;
+  margin: 63px 24px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
 }
